@@ -35,6 +35,11 @@ cd $R_FOLDER_NAME
 make
 make install
 
+R --slave -e "devtools::install_github('glmgen/genlasso')"
+R --slave -e "devtools::install_github('hazimehh/L0Learn')"
+R --slave -e "devtools::install_github('rstudio/reticulate')"
+R --slave -e "install.packages('abind', repos='http://cran.us.r-project.org')"
+
 # Removing installation overhead.
  
 cd
